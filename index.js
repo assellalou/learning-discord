@@ -9,10 +9,7 @@ client.once('ready', ()=>{
 });
 
 client.on('message', message=>{
-    
-    //console.log(message.content);
     if(message.content.startsWith(`${prefix}kick`)){
-        //message.channel.send('hello from bot');
         if(message.member.hasPermission(['ADMINISTRATOR'])){
             let member = message.mentions.members.first();
             member.kick().then((member)=>{
